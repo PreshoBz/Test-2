@@ -56,3 +56,23 @@ public:
       }
   }
 };
+
+int main() {
+  HashTable ht;
+
+  // Step 1: Insert initial values
+  int initialKeys[] = {18, 41, 22, 44, 59};
+  cout << "Inserting initial keys...\n";
+  for (int key : initialKeys)
+      ht.insert(key);
+
+  ht.display();  // Show table after initial insertions
+
+  // Step 2: Insert 28 to show collision
+  cout << "\nNow inserting 28 (will cause collision)...\n";
+  ht.insert(28);
+
+  ht.display();  // Final display
+
+  return 0;
+}
